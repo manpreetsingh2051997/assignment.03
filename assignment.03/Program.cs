@@ -1,13 +1,15 @@
-﻿
-    
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Manpreet singh sidhu (C0726407)
-//Arshdeep singh brar (C0730228)
+
+
+//Manpreet singh sidhu C0726407
+//Arshdeep singh brar C0730228
+
+
 
 namespace Assignment_3
 {
@@ -15,14 +17,44 @@ namespace Assignment_3
 
     class Program
     {
-        static void Main(string[] args) { }
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.Run();
+        }
     }
 
     class Student
     {
+        List<String> StudentList = new List<string>();
         String Student_name;
         String StudentID;
         double StudentGPA;
+
+        public void Run()
+        {
+            PopulateStudentList();
+        }
+
+        public void PopulateStudentList()
+        {
+            try
+            {
+                String directory = "U:/Users/726407/New folder/names.txt";
+                string text;
+                var fileStream = new FileStream(@directory, FileMode.Open, FileAccess.Read);
+                using (var streamReader = new StreamReader(fileStream, Encoding.UTF8))
+                {
+                    text = streamReader.ReadToEnd();
+                    StudentList.Add(text);
+                }
+            }
+
+            catch (Exception e) { }
+
+        }
+
+
 
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
