@@ -6,8 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Manpreet singh sidhu C0726407
-//Arshdeep singh brar C0730228
+//Manpreet singh sidhu (C0726407)
+//Arshdeep singh brar (C0730228)
 
 namespace Assignment_3
 {
